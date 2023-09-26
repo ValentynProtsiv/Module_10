@@ -2,7 +2,7 @@ package TaskThree;
 
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.Arrays;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
@@ -23,7 +23,9 @@ public class TaskThree {
                     textMap.put(words, 0);
                 textMap.put(words, textMap.get(words) + 1);
             }
-            textMap.forEach((key, value) -> System.out.println(key + " " + value));
+            textMap.entrySet().stream()
+                    .sorted(Collections.reverseOrder(Map.Entry.comparingByValue()))
+                    .forEach(entry -> System.out.println(entry.getKey() + " " + entry.getValue()));
 
         }catch (IOException e){
             System.out.println(e.getMessage());
