@@ -4,7 +4,7 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
-class TaskOne {
+public class TaskOne {
     static File file = new File("src/main/java/TaskOne/file.txt");
     public static void readFile() {
         final String phoneFormat1 = "(\\(\\d{3}\\)) \\d{3}-\\d{4}";
