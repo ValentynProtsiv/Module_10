@@ -1,9 +1,11 @@
+package TaskOne;
+
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
 class TaskOne {
-    static File file = new File("fileForTaskOne.txt");
+    static File file = new File("src/main/java/TaskOne/file.txt");
     public static void readFile() {
         final String phoneFormat1 = "(\\(\\d{3}\\)) \\d{3}-\\d{4}";
         final String phoneFormat2 = "\\d{3}-\\d{3}-\\d{4}";
